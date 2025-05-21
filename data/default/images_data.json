@@ -28,34 +28,19 @@
                 "unit_price": null,
                 "tax_percent": null,
                 "total_price": null
+            },
+            {
+                "name": "SAUCE",
+                "quantity": 1,
+                "unit_price": null,
+                "tax_percent": null,
+                "total_price": null
             }
         ],
         "subtotal": null,
         "tax_percent": null,
         "total": 40.55,
-        "payment_method": "Mastercard 6926"
-    },
-    "bill1.png": {
-        "invoice_number": "FABZDC2100864029",
-        "order_id": "00119571078366432000",
-        "order_date": "08-2030",
-        "invoice_date": "31-08-2020",
-        "seller": "Tech-Connect Retail Private Limited",
-        "buyer": "QszvenceSngslons er SP ing",
-        "billing_address": "Venice SP Ring 03- ingalowsNear SP Ring Road,Behind Rainforest Bungalows, Nana Chiloda. Ahmedabad 382330 Gujarat",
-        "items": [
-            {
-                "name": "Laptops Honor MagicBook 15 Ryzen 1 FSN 5 Quad Core - 8 GB/256 GB COMFT42FHHDAGAN6 SD/Windows 10 Home",
-                "quantity": 1,
-                "unit_price": 42990.0,
-                "tax_percent": 18.0,
-                "total_price": 42990.0
-            }
-        ],
-        "subtotal": 42990.0,
-        "tax_percent": 18.0,
-        "total": 42990.0,
-        "payment_method": null
+        "payment_method": "Mastercard"
     },
     "bill2.png": {
         "invoice_number": "N-761",
@@ -64,41 +49,26 @@
         "invoice_date": "28.10.2019",
         "seller": "Varasiddhi Silk Exports",
         "buyer": "Madhu B",
-        "billing_address": "Eurofins IT Solutions India Pvt Ltd, 1st Floor, Maruti Platinum, Lakshminarayana Pura, AECS Layou BENGALURU, KARNATAKA, 560037",
+        "billing_address": "Eurofins IT Solutions India Pvt Ltd, 1st Floor, Maruti Platinum, Lakshminarayana Pura, AECS Layou\nBENGALURU, KARNATAKA, 80037",
         "items": [
             {
-                "name": "Narasda SmsWos Fora HA TONIEE Ray BRe BT ToT",
+                "name": "Narasimha Silks Womens Formal Wear",
                 "quantity": 1,
                 "unit_price": 1158.1,
                 "tax_percent": 2.5,
                 "total_price": 1195.0
+            },
+            {
+                "name": "Narasimha Silks Womens Formal Wear",
+                "quantity": 1,
+                "unit_price": 1158.1,
+                "tax_percent": 2.5,
+                "total_price": 66.0
             }
         ],
-        "subtotal": 1158.1,
+        "subtotal": 2316.2,
         "tax_percent": null,
         "total": 1195.0,
-        "payment_method": null
-    },
-    "bill5.jpg": {
-        "invoice_number": null,
-        "order_id": "00121713279344456000",
-        "order_date": "05.05.2021",
-        "invoice_date": "06-05-2021",
-        "seller": "Jeeves consumer services Private Limited",
-        "buyer": "Ankit Kumar",
-        "billing_address": "Near ITI Vananchal, City center, Combined Building Dhanbad 826001 Jharkhand",
-        "items": [
-            {
-                "name": "Aceldental Damage Complete Mobile Protection Plane Protection 1 Year for phones between 15-20K",
-                "quantity": 1,
-                "unit_price": 799.0,
-                "tax_percent": 18.0,
-                "total_price": 765.0
-            }
-        ],
-        "subtotal": 799.0,
-        "tax_percent": 18.0,
-        "total": 765.0,
         "payment_method": null
     },
     "bill4.jpg": {
@@ -130,17 +100,61 @@
         "total": 30238.0,
         "payment_method": null
     },
+    "bill1.png": {
+        "invoice_number": "FABZDC2100864029",
+        "order_id": "00119571078366432000",
+        "order_date": "31-08-2020",
+        "invoice_date": "31-08-2020",
+        "seller": "Tech-Connect Retail Private Limited",
+        "buyer": "Venice SP",
+        "billing_address": "Venice SP Ring Road,Behind Rainforest Bungalows, Nana Chiloda. Ahmedabad 382330 Gujarat",
+        "items": [
+            {
+                "name": "Honor MagicBook 15 Ryzen 5 Quad Core - 8 GB/256 GB SSD/Windows 10 Home Thin and Light Laptop",
+                "quantity": 1,
+                "unit_price": 42990.0,
+                "tax_percent": 18.0,
+                "total_price": 42990.0
+            }
+        ],
+        "subtotal": 42990.0,
+        "tax_percent": null,
+        "total": 42990.0,
+        "payment_method": null
+    },
+    "bill5.jpg": {
+        "invoice_number": null,
+        "order_id": "00121713279344456000",
+        "order_date": "05.05.2021",
+        "invoice_date": "06-05-2021",
+        "seller": "Jeeves consumer services Private Limited",
+        "buyer": "Ankit Kumar",
+        "billing_address": "Near ITI Vananchal, City center, Combined Building Dhanbad 826001 Jharkhand",
+        "items": [
+            {
+                "name": "Aceldental Damage Complete Mobile Protection Plane Protection 1 Year for phones between 15-20K",
+                "quantity": 1,
+                "unit_price": 799.0,
+                "tax_percent": 18.0,
+                "total_price": 765.0
+            }
+        ],
+        "subtotal": 799.0,
+        "tax_percent": null,
+        "total": 765.0,
+        "payment_method": null
+    },
     "bill6.jpg": {
         "invoice_number": null,
         "order_id": null,
         "order_date": "02-05-2022",
         "invoice_date": "02-05-2022",
         "seller": "Consulting Rooms Private Limited",
-        "buyer": null,
+        "buyer": "Padikeshiner bie",
         "billing_address": "Chennai Chennai Tamil Nadu",
         "items": [
             {
-                "name": "Pureit Marvella G2 4 L UV Water purifiers",
+                "name": "Pureit Marvella G2 4 L UV Water Purifier",
                 "quantity": 1,
                 "unit_price": 8490.0,
                 "tax_percent": 9.0,
@@ -150,7 +164,7 @@
                 "name": "Exchange of Any Any Type Water Purifier",
                 "quantity": 1,
                 "unit_price": -200.0,
-                "tax_percent": null,
+                "tax_percent": 0.0,
                 "total_price": -450.0
             }
         ],

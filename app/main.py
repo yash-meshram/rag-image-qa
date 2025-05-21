@@ -1,6 +1,6 @@
 from models import google_generative_ai_llm
 from billParser import AnalyzeImage
-from jsonStore import save_json, search_json
+from jsonStore import save_json, load_json, search_json
 import streamlit as st
 import os
 
@@ -39,7 +39,8 @@ if not on:
             
         with st.spinner("Parsing bill..."):
             json_response = AnalyzeImage().parse_bills(temp_paths, llm)
-            save_json(json_response, type = type)
+            # save_json(json_response, type = type)
+            st.session_state["json_data"] = json_response
             
         for temp_path in temp_paths:
             os.remove(temp_path)
@@ -63,6 +64,15 @@ if not on:
         )
 
         submit = st.button("Submit")
+        
+        def get_response(question):
+            '''getting the answer for the given question'''
+            
+            with st.spinner("Generating answer..."):
+                images_data = st.session_state["json_data"]
+                answer = search_json(question, images_data, llm, type = type)
+            return answer.content
+            
 
 elif on:
     reload = st.button("Reload Default images!")
@@ -76,17 +86,19 @@ elif on:
     
     question = st.text_input(
         "Ask question related to the default bill images",
-        value = "what is the total bill amount?"
+        value = "what is the total bill amount?",
+        disabled = st.session_state.get("reloading", False)
     )
 
-    submit = st.button("Submit", disabled=st.session_state.get("reloading", False))
+    submit = st.button("Submit", disabled = st.session_state.get("reloading", False))
 
-def get_response(question):
-    '''getting the answer for the given question'''
-    
-    with st.spinner("Generating answer..."):
-        answer = search_json(question, llm, type = type)
-    return answer.content
+    def get_response(question):
+        '''getting the answer for the given question'''
+        
+        with st.spinner("Generating answer..."):
+            images_data = load_json(type = type)
+            answer = search_json(question, images_data, llm, type = type)
+        return answer.content
 
 
 if submit:

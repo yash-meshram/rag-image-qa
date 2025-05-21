@@ -4,7 +4,6 @@ import pytesseract
 from PIL import Image
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
-import imghdr
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 
@@ -42,8 +41,16 @@ class AnalyzeImage:
     def extract_text(self, image_paths: list):
         '''extracting the text from the bill images'''
         
+        def is_valid_image(image_path):
+            try:
+                with Image.open(image_path) as img:
+                    img.verify()
+                return True
+            except Exception:
+                return False
+        
         def process_image(image_path):
-            if imghdr.what(image_path):
+            if is_valid_image(image_path):
                 image_name = os.path.basename(image_path)
                 try:
                     text = pytesseract.image_to_string(Image.open(image_path))

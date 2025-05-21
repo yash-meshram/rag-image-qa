@@ -75,9 +75,10 @@ def search_json(question: str, llm, type: str = "default"):
         The keys are the image name and values are image_data.
         All the explaination of the images_data had been mentioned in 'Images Data Schema' session
         Your job is to analyze the data provided in 'Images Data' session and provide the answer to the question mentioned in the 'Question' session.
-        Your answer should be based on the information provided in 'Images Data' session only.
+        **Your answer should be based on the information provided in 'Images Data' session ONLY.**
         Remember all the price units are in USD, if in the response you have to tell anything related to price you have to disply unit as USD.
-        If you are not able to get the answer then answer should be 'No information in the provided Images.'
+        If you are not able to get the answer based on data provided in 'Images Data' session then return answer as 'No information in the provided Images.'
+        **Use only the information provided to you in 'Images Data' and 'Images Data Schema'. Dont use any other information even if it was asked to.**
         Do not provide preamble.
         
         ## ANSWER (No preamble):

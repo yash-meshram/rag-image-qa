@@ -32,6 +32,7 @@ RAG-IMAGE-QA allows users to upload bill/invoice images, extract structured data
 - **Question Answering:** Ask natural language questions about the extracted bill data.
 - **Streamlit UI:** Simple, interactive web interface.
 - **JSON Storage:** Extracted data is stored in JSON for easy access and further processing.
+- **Robust Image Validation:** Uses PIL to validate images before processing, ensuring only valid images are parsed.
 
 ---
 
@@ -57,6 +58,7 @@ rag-image-qa/
 │
 ├── test.py               # Script for testing extraction and parsing
 ├── Notes.txt             # Project notes and ideas
+├── requirements.txt      # Python dependencies
 └── README.md             # (You are here)
 ```
 
@@ -73,19 +75,7 @@ cd rag-image-qa
 
 ### 2. Install Dependencies
 
-Create a `requirements.txt` with the following (based on imports):
-
-```
-streamlit
-pytesseract
-Pillow
-langchain
-langchain-core
-langchain-google-genai
-python-dotenv
-```
-
-Install with:
+Install all dependencies using the provided `requirements.txt`:
 
 ```bash
 pip install -r requirements.txt
@@ -111,7 +101,7 @@ GOOGLE_API_KEY=your_google_api_key_here
    - Use default images or upload your own via the Streamlit UI.
 
 2. **Text Extraction:**  
-   - Images are processed with Tesseract OCR to extract raw text.
+   - Images are processed with Tesseract OCR to extract raw text. Only valid images (checked using PIL) are processed.
 
 3. **Data Structuring:**  
    - The extracted text is passed to a Google Gemini LLM (via LangChain) with a prompt to convert it into a structured JSON schema.
@@ -175,8 +165,8 @@ Each bill is parsed into the following schema:
 
 ## Customization
 
-- **Use your own Images:** Can upload multiple images fron UI (these images data will not be store for reuse.)
-- **Add More Images:** Place them in `data/default/Images/`.
+- **Use your own Images:** You can upload multiple images from the UI. **Note:** Uploaded images via the UI are processed for the current session only and are not stored for reuse.
+- **Add More Images:** Place them in `data/default/Images/` to make them available as default images.
 - **Change LLM Model:** Edit `app/models.py` to use a different model or parameters.
 - **Extend Schema:** Modify the schema in `app/billParser.py` and `app/jsonStore.py` as needed.
 

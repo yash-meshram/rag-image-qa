@@ -1,0 +1,31 @@
+{
+    "image_name": {
+        "invoice_number": "N-761",
+        "order_id": "409-9225714-7676907",
+        "order_date": "28.10.2019",
+        "invoice_date": "28.10.2019",
+        "seller": "Varasiddhi Silk Exports",
+        "buyer": "Madhu B",
+        "billing_address": "Eurofins IT Solutions India Pvt Ltd, 1st Floor,\nMart Platinum, Lakshminarayana Pir, AECS\nBENGALURU, KARNATAKA, 560037",
+        "items": [
+            {
+                "name": "Narasda SmsWos Fora HA TONIEE Ray BRe BT ToT",
+                "quantity": 1,
+                "unit_price": 1338.1,
+                "tax_percent": 2.5,
+                "total_price": 1365.0
+            },
+            {
+                "name": "roi ne 7 Bue ADT Tess",
+                "quantity": 1,
+                "unit_price": 1338.1,
+                "tax_percent": 2.5,
+                "total_price": 1365.0
+            }
+        ],
+        "subtotal": 2676.2,
+        "tax_percent": null,
+        "total": 1195.0,
+        "payment_method": null
+    }
+}

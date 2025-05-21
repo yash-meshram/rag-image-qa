@@ -1,0 +1,27 @@
+loading the images
+
+extracting text from image
+    AWS textract
+
+-- dont know about next 2 steps
+-- have to put a single image data in jason format
+-- may be using one json file 
+
+splitting the text
+
+embedding
+
+building model
+    google genai
+
+
+
+
+- extractinng text from 1 image
+- extracting text from multiple images
+- saving the extracted data from image in json formate
+- check wether the new image is already in the data
+- how we wll handle if let say bill2 is edited or removed?
+- hosting
+- different type of extraction text
+

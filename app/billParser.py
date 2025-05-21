@@ -37,15 +37,37 @@ class AnalyzeImage:
                 "payment_method": 'payment method mentioned in the bill. format=str'
             }
         }
+    
+    
+    def extract_text(self, image_paths: list):
+        '''extracting the text from the bill images'''
         
-    # def extract_text(self, image_path:str):
-    #     '''Extracting text from image'''
-    #     # using pytesseract
-    #     extracted_text = pytesseract.image_to_string(Image.open(image_path))
-    #     return extracted_text
+        def process_image(image_path):
+            if imghdr.what(image_path):
+                image_name = os.path.basename(image_path)
+                try:
+                    text = pytesseract.image_to_string(Image.open(image_path))
+                    return image_name, text
+                except Exception as e:
+                    return image_name, f"Error: {e}"
+            return None
+
+        extracted_text = {}
+
+        with ThreadPoolExecutor() as executor:
+            futures = [executor.submit(process_image, path) for path in image_paths]
+            for future in as_completed(futures):
+                result = future.result()
+                if result:
+                    image_name, text = result
+                    extracted_text[image_name] = text
+
+        return extracted_text
+
     
     def extract_bill_info(self, extracted_text, llm):
         '''Use LLM to extract structured bill info from the extracted text'''
+        
         prompt = ChatPromptTemplate.from_template(
             """
             ## BILL SCHEMA
@@ -69,45 +91,26 @@ class AnalyzeImage:
             }
         )
         return response
-    
-    # def extract_text(self, image_paths: list):
-    #     extracted_text = {}
-    #     for image_path in image_paths:
-    #         if imghdr.what(image_path):
-    #             image_name = os.path.basename(image_path)
-    #             text = pytesseract.image_to_string(Image.open(image_path))
-    #             extracted_text[image_name] = text
-    #     return extracted_text
-    
-    def extract_text(self, image_paths: list):
-        def process_image(image_path):
-            if imghdr.what(image_path):
-                image_name = os.path.basename(image_path)
-                try:
-                    text = pytesseract.image_to_string(Image.open(image_path))
-                    return image_name, text
-                except Exception as e:
-                    return image_name, f"Error: {e}"
-            return None
-
-        extracted_text = {}
-
-        with ThreadPoolExecutor() as executor:
-            futures = [executor.submit(process_image, path) for path in image_paths]
-            for future in as_completed(futures):
-                result = future.result()
-                if result:
-                    image_name, text = result
-                    extracted_text[image_name] = text
-
-        return extracted_text
             
+
+    def parse_bills(self, image_paths, llm):
+        '''extract the data from the images and return it in json format'''
         
-    
-    def parse_bill(self, image_path, llm):
-        extracted_text = self.extract_text(image_path)
+        extracted_text = self.extract_text(image_paths)
         response = self.extract_bill_info(extracted_text, llm)
         # json parser
         json_parser = JsonOutputParser()
         json_response = json_parser.parse(response.content)
+        return json_response
+    
+
+    def parse_bills_from_data_directory(self, data_directory: str, llm):
+        '''extract the data from the all the images in the given data_directory and retun in json format'''
+        
+        image_paths = [
+            os.path.join(data_directory, file_name)
+            for file_name in os.listdir(data_directory)
+            if file_name.endswith(("png", "jpg", "jpeg"))
+        ]
+        json_response = self.parse_bills(image_paths, llm)
         return json_response

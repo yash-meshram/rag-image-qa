@@ -4,22 +4,32 @@ import json
 from langchain.prompts import PromptTemplate
 
 def save_json(data: Dict[str, Any], type: str = "default"):
+    '''saving the json data in the json file'''
+    
     if type == "default":
         with open("data/default/images_data.json", 'w') as f:
             json.dump(data, f, indent=4)
+            
     elif type == "browse":
         with open("data/browse/images_data.json", 'w') as f:
             json.dump(data, f, indent=4)
-            
+
+
 def load_json(type: str = "default"):
+    '''loading the json file'''
+    
     if type == "default":
         with open("data/default/images_data.json", 'r') as f:
             return json.load(f)
+        
     elif type == "browse":
         with open("data/browse/images_data.json", 'r') as f:
             return json.load(f)
-        
+
+
 def search_json(question: str, llm, type: str = "default"):
+    '''for the given question search in the json file for the answer using llm'''
+    
     images_data = load_json(type = type)
     
     BILL_SCHEMA = {

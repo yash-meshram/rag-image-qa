@@ -2,7 +2,7 @@
     "bill3.png": {
         "invoice_number": null,
         "order_id": "27597329",
-        "order_date": "July 16",
+        "order_date": null,
         "invoice_date": null,
         "seller": "China Bistro & Sushi - INTEGRATED",
         "buyer": "Ben Blaine",
@@ -33,7 +33,7 @@
         "subtotal": null,
         "tax_percent": null,
         "total": 40.55,
-        "payment_method": "Mastercard"
+        "payment_method": "Mastercard 6926"
     },
     "bill1.png": {
         "invoice_number": "FABZDC2100864029",
@@ -41,11 +41,11 @@
         "order_date": "08-2030",
         "invoice_date": "31-08-2020",
         "seller": "Tech-Connect Retail Private Limited",
-        "buyer": "Venice SP",
-        "billing_address": "Road,Behind Rainforest Bungalows, Nana Chiloda. Ahmedabad 382330 Gujarat",
+        "buyer": "QszvenceSngslons er SP ing",
+        "billing_address": "Venice SP Ring 03- ingalowsNear SP Ring Road,Behind Rainforest Bungalows, Nana Chiloda. Ahmedabad 382330 Gujarat",
         "items": [
             {
-                "name": "Laptops Honor MagicBook 15 Ryzen 5 Quad Core - 8 GB/256 GB",
+                "name": "Laptops Honor MagicBook 15 Ryzen 1 FSN 5 Quad Core - 8 GB/256 GB COMFT42FHHDAGAN6 SD/Windows 10 Home",
                 "quantity": 1,
                 "unit_price": 42990.0,
                 "tax_percent": 18.0,
@@ -53,7 +53,7 @@
             }
         ],
         "subtotal": 42990.0,
-        "tax_percent": null,
+        "tax_percent": 18.0,
         "total": 42990.0,
         "payment_method": null
     },
@@ -67,16 +67,96 @@
         "billing_address": "Eurofins IT Solutions India Pvt Ltd, 1st Floor, Maruti Platinum, Lakshminarayana Pura, AECS Layou BENGALURU, KARNATAKA, 560037",
         "items": [
             {
-                "name": "Narasimha Silks Women's Kanjivaram Art Silk Saree",
+                "name": "Narasda SmsWos Fora HA TONIEE Ray BRe BT ToT",
                 "quantity": 1,
-                "unit_price": 1115.45,
+                "unit_price": 1158.1,
                 "tax_percent": 2.5,
                 "total_price": 1195.0
             }
         ],
-        "subtotal": 1115.45,
+        "subtotal": 1158.1,
         "tax_percent": null,
         "total": 1195.0,
+        "payment_method": null
+    },
+    "bill5.jpg": {
+        "invoice_number": null,
+        "order_id": "00121713279344456000",
+        "order_date": "05.05.2021",
+        "invoice_date": "06-05-2021",
+        "seller": "Jeeves consumer services Private Limited",
+        "buyer": "Ankit Kumar",
+        "billing_address": "Near ITI Vananchal, City center, Combined Building Dhanbad 826001 Jharkhand",
+        "items": [
+            {
+                "name": "Aceldental Damage Complete Mobile Protection Plane Protection 1 Year for phones between 15-20K",
+                "quantity": 1,
+                "unit_price": 799.0,
+                "tax_percent": 18.0,
+                "total_price": 765.0
+            }
+        ],
+        "subtotal": 799.0,
+        "tax_percent": 18.0,
+        "total": 765.0,
+        "payment_method": null
+    },
+    "bill4.jpg": {
+        "invoice_number": null,
+        "order_id": "0D126072700802569000",
+        "order_date": "23-09-2022",
+        "invoice_date": "23-09-2022",
+        "seller": "Sane Retails Private Limited",
+        "buyer": "Shaik Thoufiq",
+        "billing_address": "Naidu Gents Hostel, Naidu gents hostel,near oyo town house,kumran nagar, Thiruvalluvar Salai, Sholinganallur. Chennai 600119 Tamil Nadu",
+        "items": [
+            {
+                "name": "SAMSUNG Galaxy S21 FE 5G (Olive, 128 GB)",
+                "quantity": 1,
+                "unit_price": 34999.0,
+                "tax_percent": 18.0,
+                "total_price": 30209.0
+            },
+            {
+                "name": "Shipping And Packaging Charges",
+                "quantity": 1,
+                "unit_price": 69.0,
+                "tax_percent": 18.0,
+                "total_price": 29.0
+            }
+        ],
+        "subtotal": 35068.0,
+        "tax_percent": null,
+        "total": 30238.0,
+        "payment_method": null
+    },
+    "bill6.jpg": {
+        "invoice_number": null,
+        "order_id": null,
+        "order_date": "02-05-2022",
+        "invoice_date": "02-05-2022",
+        "seller": "Consulting Rooms Private Limited",
+        "buyer": null,
+        "billing_address": "Chennai Chennai Tamil Nadu",
+        "items": [
+            {
+                "name": "Pureit Marvella G2 4 L UV Water purifiers",
+                "quantity": 1,
+                "unit_price": 8490.0,
+                "tax_percent": 9.0,
+                "total_price": 7675.0
+            },
+            {
+                "name": "Exchange of Any Any Type Water Purifier",
+                "quantity": 1,
+                "unit_price": -200.0,
+                "tax_percent": null,
+                "total_price": -450.0
+            }
+        ],
+        "subtotal": 8290.0,
+        "tax_percent": null,
+        "total": 7225.0,
         "payment_method": null
     }
 }

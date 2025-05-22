@@ -15,6 +15,7 @@ A Streamlit-based application for extracting structured information from bill/in
 - [Data Schema](#data-schema)
 - [Customization](#customization)
 - [Notes](#notes)
+- [Diagrams](#diagrams)
 - [License](#license)
 
 ---
@@ -42,24 +43,27 @@ RAG-IMAGE-QA allows users to upload bill/invoice images, extract structured data
 rag-image-qa/
 │
 ├── app/
-│   ├── main.py           # Streamlit app entry point
-│   ├── billParser.py     # Image parsing and data extraction logic
-│   ├── jsonStore.py      # JSON storage and QA logic
-│   ├── models.py         # LLM model initialization
-│   └── __pycache__/
+│   ├── main.py               # Streamlit app entry point
+│   ├── billParser.py         # Image parsing and data extraction logic
+│   ├── jsonStore.py          # JSON storage and QA logic
+│   ├── models.py             # LLM model initialization
+│   └── __pycache__/          # Python cache files
 │
 ├── data/
 │   ├── default/
-│   │   ├── Images/       # Default bill images
-│   │   └── images_data.json
+│   │   ├── Images/           # Default bill images
+│   │   └── images_data.json  # Stores structured data extracted from images in this folder
 │   └── browse/
-│       ├── Images/       # User-uploaded images
+│       ├── Images/           # User-uploaded images
 │       └── images_data.json
 │
-├── test.py               # Script for testing extraction and parsing
-├── Notes.txt             # Project notes and ideas
-├── requirements.txt      # Python dependencies
-└── README.md             # (You are here)
+├── UI Specification.pdf      # UI details and functionalities
+├── Application_Diagram.png   # Application architecture diagram
+├── Sequence_Diagram.png      # Sequence flow diagram
+├── requirements.txt          # Python dependencies
+├── test.py                   # Script for testing extraction and parsing
+├── Notes.txt                 # Project notes and ideas
+└── README.md                 # Project documentation
 ```
 
 ---
@@ -198,6 +202,18 @@ Each bill is parsed into the following schema:
 - All price units are assumed to be in USD.
 - If a question cannot be answered from the data, the app will respond with "No information in the provided Images."
 - For development/testing, see `test.py` for standalone extraction and parsing examples.
+
+---
+
+## Diagrams
+
+### Application Diagram
+
+![Application Diagram](./Application_Diagram.png)
+
+### Sequence Diagram
+
+![Sequence Diagram](./Sequence_Diagram.png)
 
 ---
 

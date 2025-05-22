@@ -85,13 +85,9 @@ Install all dependencies using the provided `requirements.txt`:
 pip install -r requirements.txt
 ```
 
-> **Note:** You also need Tesseract OCR installed on your system.  
-> On Ubuntu: `sudo apt-get install tesseract-ocr`
-
 ### 3. Environment Variables
 
-Create a `.env` file **one directory above** the project root (as the code loads `../.env`).  
-Add your Google Generative AI API key and any other required secrets:
+Create a `.env` file and add Google Generative AI API key
 
 ```
 GOOGLE_API_KEY=your_google_api_key_here

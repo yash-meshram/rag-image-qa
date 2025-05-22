@@ -1,13 +1,11 @@
-from dotenv import load_dotenv
 import os
 import pytesseract
 from PIL import Image
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
 from concurrent.futures import ThreadPoolExecutor, as_completed
+import boto3
 
-
-load_dotenv("../.env")
 
 class AnalyzeImage:
     def __init__(self):
@@ -38,8 +36,9 @@ class AnalyzeImage:
         }
     
     
+    # Method 1: Pytesseract (currently using)
     def extract_text(self, image_paths: list):
-        '''extracting the text from the bill images'''
+        '''extracting the text from the bill images using pytesseract'''
         
         def is_valid_image(image_path):
             try:
@@ -70,8 +69,50 @@ class AnalyzeImage:
                     extracted_text[image_name] = text
 
         return extracted_text
-
     
+    
+    # Method 2: AWS Textract
+    def extract_text_(self, image_paths: list):
+        '''extracting the text from the bill images using AWS textract'''
+        
+        def is_valid_image(image_path):
+            try:
+                with Image.open(image_path) as img:
+                    img.verify()
+                return True
+            except Exception:
+                return False
+        
+        def process_image(image_path):
+            if is_valid_image(image_path):
+                image_name = os.path.basename(image_path)
+                try:
+                    textract_client = boto3.client('textract')
+                    with open(image_path, "rb") as document_file:
+                        document_bytes = document_file.read()               
+                    response = textract_client.detect_document_text(Document={"Bytes": document_bytes})
+                    text = ''
+                    for item in response['Blocks']:
+                        if item['BlockType'] == 'LINE':
+                            text += item['Text'] + '\n'
+                    return image_name, text
+                except Exception as e:
+                    return image_name, f"Error: {e}"
+            return None
+
+        extracted_text = {}
+
+        with ThreadPoolExecutor() as executor:
+            futures = [executor.submit(process_image, path) for path in image_paths]
+            for future in as_completed(futures):
+                result = future.result()
+                if result:
+                    image_name, text = result
+                    extracted_text[image_name] = text
+
+        return extracted_text
+        
+
     def extract_bill_info(self, extracted_text, llm):
         '''Use LLM to extract structured bill info from the extracted text'''
         

@@ -27,10 +27,10 @@ def load_json(type: str = "default"):
             return json.load(f)
 
 
-def search_json(question: str, llm, type: str = "default"):
+def search_json(question: str, images_data: json, llm, type: str = "default"):
     '''for the given question search in the json file for the answer using llm'''
     
-    images_data = load_json(type = type)
+    # images_data = load_json(type = type)
     
     BILL_SCHEMA = {
         "image_name": {

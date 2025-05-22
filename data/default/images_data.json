@@ -2,7 +2,7 @@
     "bill3.png": {
         "invoice_number": null,
         "order_id": "27597329",
-        "order_date": null,
+        "order_date": "July 16",
         "invoice_date": null,
         "seller": "China Bistro & Sushi - INTEGRATED",
         "buyer": "Ben Blaine",
@@ -28,99 +28,12 @@
                 "unit_price": null,
                 "tax_percent": null,
                 "total_price": null
-            },
-            {
-                "name": "SAUCE",
-                "quantity": 1,
-                "unit_price": null,
-                "tax_percent": null,
-                "total_price": null
             }
         ],
         "subtotal": null,
         "tax_percent": null,
         "total": 40.55,
-        "payment_method": "Mastercard"
-    },
-    "bill2.png": {
-        "invoice_number": "N-761",
-        "order_id": "409-9225714-7676907",
-        "order_date": "28.10.2019",
-        "invoice_date": "28.10.2019",
-        "seller": "Varasiddhi Silk Exports",
-        "buyer": "Madhu B",
-        "billing_address": "Eurofins IT Solutions India Pvt Ltd, 1st Floor, Maruti Platinum, Lakshminarayana Pura, AECS Layou\nBENGALURU, KARNATAKA, 80037",
-        "items": [
-            {
-                "name": "Narasimha Silks Womens Formal Wear",
-                "quantity": 1,
-                "unit_price": 1158.1,
-                "tax_percent": 2.5,
-                "total_price": 1195.0
-            },
-            {
-                "name": "Narasimha Silks Womens Formal Wear",
-                "quantity": 1,
-                "unit_price": 1158.1,
-                "tax_percent": 2.5,
-                "total_price": 66.0
-            }
-        ],
-        "subtotal": 2316.2,
-        "tax_percent": null,
-        "total": 1195.0,
-        "payment_method": null
-    },
-    "bill4.jpg": {
-        "invoice_number": null,
-        "order_id": "0D126072700802569000",
-        "order_date": "23-09-2022",
-        "invoice_date": "23-09-2022",
-        "seller": "Sane Retails Private Limited",
-        "buyer": "Shaik Thoufiq",
-        "billing_address": "Naidu Gents Hostel, Naidu gents hostel,near oyo town house,kumran nagar, Thiruvalluvar Salai, Sholinganallur. Chennai 600119 Tamil Nadu",
-        "items": [
-            {
-                "name": "SAMSUNG Galaxy S21 FE 5G (Olive, 128 GB)",
-                "quantity": 1,
-                "unit_price": 34999.0,
-                "tax_percent": 18.0,
-                "total_price": 30209.0
-            },
-            {
-                "name": "Shipping And Packaging Charges",
-                "quantity": 1,
-                "unit_price": 69.0,
-                "tax_percent": 18.0,
-                "total_price": 29.0
-            }
-        ],
-        "subtotal": 35068.0,
-        "tax_percent": null,
-        "total": 30238.0,
-        "payment_method": null
-    },
-    "bill1.png": {
-        "invoice_number": "FABZDC2100864029",
-        "order_id": "00119571078366432000",
-        "order_date": "31-08-2020",
-        "invoice_date": "31-08-2020",
-        "seller": "Tech-Connect Retail Private Limited",
-        "buyer": "Venice SP",
-        "billing_address": "Venice SP Ring Road,Behind Rainforest Bungalows, Nana Chiloda. Ahmedabad 382330 Gujarat",
-        "items": [
-            {
-                "name": "Honor MagicBook 15 Ryzen 5 Quad Core - 8 GB/256 GB SSD/Windows 10 Home Thin and Light Laptop",
-                "quantity": 1,
-                "unit_price": 42990.0,
-                "tax_percent": 18.0,
-                "total_price": 42990.0
-            }
-        ],
-        "subtotal": 42990.0,
-        "tax_percent": null,
-        "total": 42990.0,
-        "payment_method": null
+        "payment_method": "Mastercard 6926"
     },
     "bill5.jpg": {
         "invoice_number": null,
@@ -129,19 +42,41 @@
         "invoice_date": "06-05-2021",
         "seller": "Jeeves consumer services Private Limited",
         "buyer": "Ankit Kumar",
-        "billing_address": "Near ITI Vananchal, City center, Combined Building Dhanbad 826001 Jharkhand",
+        "billing_address": "Near ITI Vananchal, City center,\nCombined Building Dhanbad 826001 Jharkhand",
         "items": [
             {
                 "name": "Aceldental Damage Complete Mobile Protection Plane Protection 1 Year for phones between 15-20K",
                 "quantity": 1,
-                "unit_price": 799.0,
+                "unit_price": 1799.0,
                 "tax_percent": 18.0,
                 "total_price": 765.0
             }
         ],
-        "subtotal": 799.0,
-        "tax_percent": null,
+        "subtotal": 1799.0,
+        "tax_percent": 18.0,
         "total": 765.0,
+        "payment_method": null
+    },
+    "bill1.png": {
+        "invoice_number": "FABZDC2100864029",
+        "order_id": "00119571078366432000",
+        "order_date": "03-08-2030",
+        "invoice_date": "31-08-2020",
+        "seller": "Tech-Connect Retail Private Limited",
+        "buyer": "er SP ing",
+        "billing_address": "Venice SP Ring Road,Behind Rainforest Bungalows, Nana Chiloda. Ahmedabad 382330 Gujarat",
+        "items": [
+            {
+                "name": "Laptops Honor MagicBook 15 Ryzen 5 Quad Core - 8 GB/256 GB COMFT42FHHDAGAN6 SD/Windows 10 Home",
+                "quantity": 1,
+                "unit_price": 42990.0,
+                "tax_percent": 18.0,
+                "total_price": 42990.0
+            }
+        ],
+        "subtotal": 42990.0,
+        "tax_percent": 18.0,
+        "total": 42990.0,
         "payment_method": null
     },
     "bill6.jpg": {
@@ -150,11 +85,11 @@
         "order_date": "02-05-2022",
         "invoice_date": "02-05-2022",
         "seller": "Consulting Rooms Private Limited",
-        "buyer": "Padikeshiner bie",
+        "buyer": null,
         "billing_address": "Chennai Chennai Tamil Nadu",
         "items": [
             {
-                "name": "Pureit Marvella G2 4 L UV Water Purifier",
+                "name": "Water purifiers Pureit Marvella G2 4 L UV",
                 "quantity": 1,
                 "unit_price": 8490.0,
                 "tax_percent": 9.0,
@@ -169,8 +104,66 @@
             }
         ],
         "subtotal": 8290.0,
-        "tax_percent": null,
+        "tax_percent": 9.0,
         "total": 7225.0,
+        "payment_method": null
+    },
+    "bill4.jpg": {
+        "invoice_number": null,
+        "order_id": "0D126072700802569000",
+        "order_date": "23-09-2022",
+        "invoice_date": "23-09-2022",
+        "seller": "Sane Retails Private Limited",
+        "buyer": "Shaik Thoufiq",
+        "billing_address": "Naidu Gents Hostel, Naidu gents hostel,near oyo town house,kumran nagar, Thiruvalluvar Salai, Sholinganallur. Chennai 600119 Tamil Nadu",
+        "items": [
+            {
+                "name": "Handsets SAMSUNG Galaxy S21 FE 5G (Olive, 128 GB)",
+                "quantity": 1,
+                "unit_price": 34999.0,
+                "tax_percent": 18.0,
+                "total_price": 30209.0
+            },
+            {
+                "name": "Shipping And Packaging Charges",
+                "quantity": 1,
+                "unit_price": 69.0,
+                "tax_percent": 18.0,
+                "total_price": 29.0
+            }
+        ],
+        "subtotal": 35068.0,
+        "tax_percent": 18.0,
+        "total": 30238.0,
+        "payment_method": null
+    },
+    "bill2.png": {
+        "invoice_number": "N-761",
+        "order_id": "409-9225714-7676907",
+        "order_date": "28.10.2019",
+        "invoice_date": "28.10.2019",
+        "seller": "Varasiddhi Silk Exports",
+        "buyer": "Madhu B",
+        "billing_address": "Eurofins IT Solutions India Pvt Ltd, 1st Floor, Maruti Platinum, Lakshminarayana Pura, AECS Layou BENGALURU, KARNATAKA, 560037",
+        "items": [
+            {
+                "name": "Narasimha Silks Women's Faux Silk Saree With Blouse Piece",
+                "quantity": 1,
+                "unit_price": 1358.1,
+                "tax_percent": 2.5,
+                "total_price": 115.45
+            },
+            {
+                "name": "Narasimha Silks Women's Faux Silk Saree With Blouse Piece",
+                "quantity": 1,
+                "unit_price": 1358.1,
+                "tax_percent": 2.5,
+                "total_price": 5.43
+            }
+        ],
+        "subtotal": 2716.2,
+        "tax_percent": null,
+        "total": 1195.0,
         "payment_method": null
     }
 }

@@ -27,7 +27,7 @@ if not on:
     uploaded_files = st.file_uploader("Upload bill images", type=["png", "jpg", "jpeg"], accept_multiple_files = True)
     
     def load_uploaded_images():
-        '''extracting the data from the uploaded images in json format and storing them in data/browse/images_data.json file''' 
+        '''extracting the data from the uploaded images in json format and storing them in data/browse/images_data.json file or session state''' 
         
         temp_paths = []
         for file in uploaded_files:
